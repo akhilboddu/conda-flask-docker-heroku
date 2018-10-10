@@ -1,7 +1,8 @@
 from flask import Flask, request
 from flask_restful import Resource, Api
 from flask_cors import CORS
-
+import os
+port = int(os.environ.get('PORT', 5000))
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"*": {"origins": "*"}})
@@ -23,4 +24,4 @@ api.add_resource(HelloWorld, '/')
 api.add_resource(Multi, '/multi/<int:num>')
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000, threaded=True, host=('0.0.0.0'))
+    app.run(debug=True)

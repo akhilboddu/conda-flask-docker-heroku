@@ -26,6 +26,7 @@ dependencies:
     - aniso8601==3.0.2
     - flask-cors==3.0.6
     - flask-restful==0.3.6
+    - gunicorn==19.9.0
     - pytz==2018.5
     - six==1.11.0
 prefix: /anaconda3/envs/flask-app
